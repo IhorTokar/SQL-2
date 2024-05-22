@@ -1,3 +1,4 @@
+-- Р”РѕРґР°РІР°РЅРЅСЏ РєРѕСЂРёСЃС‚СѓРІР°С‡Р°
 INSERT INTO Users (username, email, password_hash, role_id) VALUES 
 ('user1', 'user1@example.com', 'password1', 2),
 ('user2', 'user2@example.com', 'password2', 2),
@@ -5,7 +6,7 @@ INSERT INTO Users (username, email, password_hash, role_id) VALUES
 ('chef1', 'chef1@example.com', 'password4', 2),
 ('guest1', 'guest1@example.com', 'password5', 2);
 
--- Вставка даних у таблицю Recipes
+-- Р’СЃС‚Р°РІРєР° РґР°РЅРёС… Сѓ С‚Р°Р±Р»РёС†СЋ Recipes
 INSERT INTO Recipes (user_id, title, description, instructions) VALUES 
 (1, 'Spaghetti Carbonara', 'Classic Italian pasta dish with bacon, eggs, and cheese.', '1. Cook pasta. 2. Fry bacon. 3. Mix eggs and cheese. 4. Combine all ingredients.'),
 (2, 'Chicken Alfredo', 'Creamy pasta dish with grilled chicken and Alfredo sauce.', '1. Grill chicken. 2. Cook pasta. 3. Make Alfredo sauce. 4. Combine all ingredients.'),
@@ -13,7 +14,7 @@ INSERT INTO Recipes (user_id, title, description, instructions) VALUES
 (4, 'Chocolate Cake', 'Decadent chocolate cake with rich frosting.', '1. Mix ingredients. 2. Bake cake. 3. Make frosting. 4. Decorate cake.'),
 (5, 'Salad', 'Fresh salad with mixed greens, tomatoes, and vinaigrette dressing.', '1. Wash and chop vegetables. 2. Prepare dressing. 3. Toss all ingredients.');
 
--- Вставка даних у таблицю Ingredients
+-- Р’СЃС‚Р°РІРєР° РґР°РЅРёС… Сѓ С‚Р°Р±Р»РёС†СЋ Ingredients
 INSERT INTO Ingredients (name) VALUES 
 ('Spaghetti'),
 ('Bacon'),
@@ -34,7 +35,7 @@ INSERT INTO Ingredients (name) VALUES
 ('Olive oil'),
 ('Vinegar');
 
--- Вставка даних у таблицю Recipe_Ingredients
+-- Р’СЃС‚Р°РІРєР° РґР°РЅРёС… Сѓ С‚Р°Р±Р»РёС†СЋ Recipe_Ingredients
 INSERT INTO Recipe_Ingredients (recipe_id, ingredient_id, quantity) VALUES 
 (1, 1, '200g'),
 (1, 2, '100g'),
