@@ -1,19 +1,19 @@
--- Створення бази даних
+-- РЎС‚РІРѕСЂРµРЅРЅСЏ Р±Р°Р·Рё РґР°РЅРёС…
 CREATE DATABASE CulinaryForum;
 GO
 
--- Використання бази даних
+-- Р’РёРєРѕСЂРёСЃС‚Р°РЅРЅСЏ Р±Р°Р·Рё РґР°РЅРёС…
 USE CulinaryForum;
 GO
 
--- Створення таблиці Roles
+-- РЎС‚РІРѕСЂРµРЅРЅСЏ С‚Р°Р±Р»РёС†С– Roles
 CREATE TABLE Roles (
-    role_id INT PRIMARY KEY IDENTITY(1,1),  -- Автоматична генерація ID, починаючи з 1
+    role_id INT PRIMARY KEY IDENTITY(1,1),  -- РђРІС‚РѕРјР°С‚РёС‡РЅР° РіРµРЅРµСЂР°С†С–СЏ ID, РїРѕС‡РёРЅР°СЋС‡Рё Р· 1
     role_name VARCHAR(50) NOT NULL
 );
 GO
 
--- Створення таблиці Users
+-- РЎС‚РІРѕСЂРµРЅРЅСЏ С‚Р°Р±Р»РёС†С– Users
 CREATE TABLE Users (
     user_id INT PRIMARY KEY IDENTITY(1,1), 
     username VARCHAR(50) NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE Users (
 );
 GO
 
--- Створення тригера для вставки нових записів у таблицю Users
+-- РЎС‚РІРѕСЂРµРЅРЅСЏ С‚СЂРёРіРµСЂР° РґР»СЏ РІСЃС‚Р°РІРєРё РЅРѕРІРёС… Р·Р°РїРёСЃС–РІ Сѓ С‚Р°Р±Р»РёС†СЋ Users
 CREATE TRIGGER trg_InsertUsers
 ON Users
 AFTER INSERT
@@ -39,7 +39,7 @@ BEGIN
 END;
 GO
 
--- Створення тригера для оновлення записів у таблицю Users
+-- РЎС‚РІРѕСЂРµРЅРЅСЏ С‚СЂРёРіРµСЂР° РґР»СЏ РѕРЅРѕРІР»РµРЅРЅСЏ Р·Р°РїРёСЃС–РІ Сѓ С‚Р°Р±Р»РёС†СЋ Users
 CREATE TRIGGER trg_UpdateUsers
 ON Users
 AFTER UPDATE
@@ -50,4 +50,3 @@ BEGIN
     WHERE user_id IN (SELECT user_id FROM inserted);
 END;
 GO
-
